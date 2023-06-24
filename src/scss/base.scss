@@ -1,0 +1,37 @@
+$container-margin: 120px;
+$accent-color: #fde82b;
+$blue: #04bee0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'SF Pro Display';
+  color: #fff;
+}
+body {
+  background-color: #0f011f;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
+a {
+  color: #fff;
+  outline: none;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  @include container();
+}

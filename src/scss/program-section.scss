@@ -1,0 +1,93 @@
+.section_program {
+  @include with-devider();
+  &:before {
+    height: 304px;
+  }
+  padding-top: 474px;
+  padding-bottom: 474px;
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  overflow: hidden;
+  z-index: 2;
+}
+.section_program_bg {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 35%;
+}
+.section_program_ellipse_pink {
+  position: absolute;
+  right: 0;
+  border-radius: 1413px;
+  background: rgba(255, 39, 174, 0.09);
+  filter: blur(264px);
+  width: 73.59vw;
+  height: 73.59vw;
+  transform: translateX(50%);
+  top: 30%;
+  z-index: 1;
+}
+.section_program_title {
+  @include section-title();
+}
+.section_program_undertitle {
+  color: #fff;
+  font-size: 25px;
+  font-family: SF Pro Display;
+  font-weight: 300;
+  margin-top: 37px;
+}
+.section_program_program {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+
+  .program_item_date {
+    color: #04bee0;
+    font-size: 55px;
+    font-family: SF Pro Display;
+    font-weight: 500;
+    margin-bottom: 38px;
+    text-align: center;
+  }
+
+  .program_item_body {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+      // display: block;
+      td {
+        padding: 62px 0 50px 0;
+        border-bottom: 1px solid #fff;
+        &:nth-child(1),
+        &:nth-child(3) {
+          color: #fff;
+          font-size: 50px;
+          font-family: SF Pro Display;
+        }
+        &:nth-child(1) {
+          width: 14.1146vw;
+        }
+        &:nth-child(3) {
+          width: 21.875vw;
+        }
+        &:nth-child(2) {
+          color: #fff;
+          font-size: 60px;
+          font-family: SF Pro Display;
+          width: 5.4166vw;
+        }
+        &:nth-child(4) {
+          color: #fff;
+          font-size: 25px;
+          font-family: SF Pro Display;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.section_speakers {
+  position: relative;
+  @include with-devider();
+  padding-top: 474px;
+  padding-bottom: 170px;
+  &::before {
+    height: 304px;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+.section_speakers_bg {
+  position: absolute;
+  width: 100%;
+  top: 28%;
+  z-index: 1;
+}
+.section_speakers_palm {
+  position: absolute;
+  right: 0;
+  top: -50%;
+  width: 25.365vw;
+  z-index: 1;
+}
+.section_speakers_title {
+  @include section-title();
+}
+.speakers_undertitle {
+  color: #fff;
+  font-size: 25px;
+  font-family: SF Pro Display;
+  font-weight: 300;
+
+  margin-top: 37px;
+}
+.speakers_cases_container {
+  display: flex;
+  gap: 20px;
+  margin-top: 58px;
+
+  .speakers_case {
+    width: 33.3%;
+  }
+  .speakers_case_title,
+  .speakers_case_content {
+    color: #fff;
+    font-size: 20px;
+    font-family: SF Pro Display;
+  }
+  .speakers_case_title {
+    font-weight: 600;
+  }
+  .speakers_case_content {
+    font-weight: 300;
+    margin-top: 20px;
+  }
+}
+.section_speakers_carousel_container {
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 104px;
+}
+.speakers_carousel_btn_prev,
+.speakers_carousel_btn_next {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.speakers_carousel_btn_prev {
+  left: -140px;
+}
+.speakers_carousel_btn_next {
+  right: -140px;
+}
+.speakers_carousel_item {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .speakers_carousel_item_img_container {
+    border-radius: 100% 100% 100% 0;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    padding-top: 20px;
+    // height: auto;
+  }
+  .speakers_carousel_item_name {
+    color: #fff;
+    font-size: 30px;
+    font-family: SF Pro Display;
+    font-weight: 600;
+  }
+  .speakers_carousel_item_list {
+    li {
+      color: #fff;
+      font-size: 20px;
+      font-family: SF Pro Display;
+      font-weight: 300;
+    }
+  }
+  .speakers_carousel_item_line {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+  }
+}
+.section_why_event.speakers_event {
+  .section_why_event_item {
+    &:first-child {
+      color: #fff;
+      font-size: 41px;
+      font-family: SF Pro Display;
+      font-weight: 600;
+      padding: 58px 32px;
+      white-space: nowrap;
+    }
+    &:nth-child(3) {
+      padding: 33px;
+      color: #fff;
+      font-size: 18px;
+      font-family: SF Pro Display;
+      font-weight: 300;
+      line-height: 25px;
+      white-space: normal;
+      text-transform: none;
+      max-width: 37vw;
+    }
+  }
+}

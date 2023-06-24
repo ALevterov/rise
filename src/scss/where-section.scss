@@ -1,0 +1,59 @@
+.section_where {
+  @include with-devider();
+  position: relative;
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  padding-top: 512px;
+  &::before {
+    height: 304px;
+  }
+}
+.section_where_palm {
+  position: absolute;
+  right: 0;
+  top: -25%;
+  width: 15.88vw;
+}
+.section_where_content {
+  padding-bottom: 74px;
+}
+.section_where_left_main {
+  display: flex;
+  justify-content: space-between;
+}
+.section_where_title {
+  @include section-title();
+  margin-bottom: 63px;
+}
+.section_where_edition {
+  width: 255px;
+  height: 46px;
+}
+.section_where_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section_where_left_subscription {
+  margin-top: 78px;
+
+  color: #fff;
+  font-size: 33px;
+  font-family: SF Pro Display;
+  font-weight: 300;
+  line-height: 30px;
+}
+.section_where_left_bottom {
+  display: flex;
+  gap: 20px;
+
+  img {
+    cursor: pointer;
+  }
+}
+.section_where_right_map {
+  width: 405px;
+  height: 741px;
+}

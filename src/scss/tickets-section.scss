@@ -1,0 +1,102 @@
+.section_tickets {
+  @include with-devider();
+  position: relative;
+  &::before {
+    height: 304px;
+    top: -304px;
+  }
+  padding-top: 151px;
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  padding-bottom: 170px;
+}
+.section_tickets_palm {
+  position: absolute;
+  left: 0;
+  width: 23vw;
+  top: -95%;
+  z-index: 1;
+}
+.tickets_container {
+  display: flex;
+  gap: 20px;
+}
+.tickets_item {
+  padding-left: 34px;
+  padding-top: 34px;
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 10px);
+  border: 1px solid #fff;
+}
+.tickets_item_title {
+  color: #fff;
+  font-size: 67px;
+  font-family: SF Pro Display;
+  font-weight: 500;
+}
+.tickets_item_services {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  p {
+    color: #fff;
+    font-size: 22px;
+    font-family: SF Pro Display;
+    font-weight: 300;
+    line-height: 35px;
+  }
+}
+.tickets_item_bottom {
+  gap: 118px;
+  margin-top: 47px;
+  display: flex;
+  justify-content: space-between;
+  .tickets_item_bottom_price {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #fff;
+    font-size: 32.522px;
+    font-family: SF Pro Display;
+    font-weight: 300;
+    text-transform: uppercase;
+    span {
+      font-weight: 700;
+      font-size: 56px;
+    }
+  }
+  .tickets_item_bottom_buy {
+    height: 136px;
+    position: relative;
+    right: -1px;
+    bottom: -1px;
+    flex-grow: 1;
+    color: #000;
+    padding-left: 62px;
+    font-size: 32.522px;
+    font-family: SF Pro Display;
+    font-weight: 600;
+    position: relative;
+    background-color: $accent-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $blue;
+    }
+    .tickets_item_arrow {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+}

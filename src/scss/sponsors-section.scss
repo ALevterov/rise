@@ -1,0 +1,30 @@
+.section_sponsors {
+  padding: 170px 0;
+}
+.sponsors_container {
+  gap: 68px;
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.section_sponsors_title {
+  @include section-title();
+}
+.sponsor_item {
+  border: 1px solid #fff;
+  position: relative;
+  // width: 369px;
+  height: 322px;
+
+  .sponsor_item_name {
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-family: SF Pro Display;
+    font-weight: 300;
+  }
+}
