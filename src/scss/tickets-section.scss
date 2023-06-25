@@ -51,7 +51,7 @@
   }
 }
 .tickets_item_bottom {
-  gap: 118px;
+  gap: 6.146vw;
   margin-top: 47px;
   display: flex;
   justify-content: space-between;
@@ -71,6 +71,7 @@
     }
   }
   .tickets_item_bottom_buy {
+    // min-width: 50%;
     height: 136px;
     position: relative;
     right: -1px;
@@ -157,6 +158,63 @@
       gap: 6px;
       span {
         font-size: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section_tickets {
+    &::before {
+      height: 124px;
+      top: -124px;
+    }
+    padding-top: 90px;
+    padding-bottom: 90px;
+    .section_tickets_palm {
+      top: -90%;
+    }
+  }
+  .tickets_container {
+    gap: 9px;
+  }
+  .tickets_item {
+    padding-top: 17px;
+    padding-left: 17px;
+  }
+  .tickets_item_title {
+    font-size: 33.614px;
+  }
+  .tickets_item_services {
+    margin-top: 21px;
+    gap: 6px;
+    p {
+      font-size: 11.038px;
+      line-height: 157%;
+    }
+  }
+  .tickets_item_bottom {
+    margin-top: 26px;
+
+    .tickets_item_bottom_buy {
+      padding-left: 31px;
+      font-size: 16.317px;
+
+      height: 68px;
+
+      .tickets_item_arrow {
+        width: 18px;
+        height: 24px;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+
+    .tickets_item_bottom_price {
+      font-size: 16.317px;
+      gap: 4px;
+      span {
+        font-size: 27px;
       }
     }
   }

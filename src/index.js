@@ -22,6 +22,9 @@ whyCarousel.owlCarousel({
   // margin: 48,
   responsive: {
     0: {
+      margin: 25,
+    },
+    1025: {
       margin: 37,
     },
     1441: {

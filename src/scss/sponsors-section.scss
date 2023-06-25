@@ -38,8 +38,25 @@
   }
   .sponsor_item {
     height: 240px;
+
+    .sponsor_item_name {
+      font-size: 15.18px;
+    }
   }
-  .sponsor_item_name {
-    font-size: 15.18px;
+}
+
+@media screen and (max-width: 1024px) {
+  .section_sponsors {
+    padding: 90px 0;
+  }
+  .sponsors_container {
+    gap: 34px;
+  }
+  .sponsor_item {
+    height: 161px;
+
+    .sponsor_item_name {
+      font-size: 10.162px;
+    }
   }
 }

@@ -164,3 +164,59 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .section_program {
+    &::before {
+      height: 124px;
+    }
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .section_program_bg {
+    top: 13%;
+  }
+  .section_program_undertitle {
+    font-size: 12.702px;
+    margin-top: 20px;
+  }
+  .section_program_program {
+    margin-top: 46px;
+  }
+  .section_program_program {
+    gap: 46px;
+    .program_item_date {
+      font-size: 27.945px;
+      margin-bottom: 26px;
+    }
+    .program_item_body {
+      width: 100%;
+      border-collapse: collapse;
+      tr {
+        transition: 0.3s ease-in-out background-color;
+        &:hover {
+          background-color: #40354d;
+          color: $blue;
+          td {
+            background-color: #40354d;
+            color: $blue;
+            border-bottom: 1px solid $blue;
+          }
+        }
+        td {
+          padding: 32px 0 27px 0;
+          &:nth-child(1),
+          &:nth-child(3) {
+            font-size: 25.404px;
+          }
+          &:nth-child(2) {
+            font-size: 30.485px;
+          }
+          &:nth-child(4) {
+            font-size: 12.702px;
+          }
+        }
+      }
+    }
+  }
+}

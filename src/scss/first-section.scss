@@ -340,3 +340,84 @@
     padding-bottom: 92px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 64px;
+    top: 35px;
+  }
+  .header__logo {
+    padding: 12.5px;
+    // width: 75px;
+    // height: 59px;
+    .header__logo_img {
+      width: 50px;
+      height: 40px;
+    }
+  }
+  .header__nav {
+    padding: 25px 0;
+    padding-left: 4vw;
+  }
+  .header__nav_link {
+    font-size: 10.536px;
+  }
+  .get_ticket_btn {
+    padding: 4.014px 7.024px;
+    font-size: 10.536px;
+  }
+  .header__social {
+    gap: 21px;
+    padding-left: 0;
+    svg {
+      width: 14.5px;
+      height: 14.5px;
+    }
+  }
+  .section_first__content {
+    padding-top: 99px;
+  }
+  .content_top_wrapper_item {
+    font-size: 35.566px;
+    padding: 11px 15.5px;
+  }
+  .section_first__content_middle {
+    margin-top: 34px;
+  }
+  .section_first_main_title {
+    font-size: 102.124px;
+  }
+  .section_first_subscription {
+    font-size: 21.848px;
+    max-width: 135px;
+  }
+  .section_first__content_bottom {
+    margin-top: 32px;
+  }
+  .get_ticket_big_btn {
+    @include get_ticket_btns(1.197px);
+    padding: 9.574px 16.754px;
+    font-size: 25.131px;
+
+    svg {
+      width: 18px;
+      height: 19px;
+      margin-left: 7px;
+    }
+  }
+  .running_string__container {
+    margin-top: 57px;
+
+    .running_string__item {
+      font-size: 12.702px;
+
+      &::after {
+        height: 1px;
+        top: calc(50% + 1px);
+      }
+    }
+  }
+  .section_first__bottom {
+    padding-bottom: 62px;
+  }
+}

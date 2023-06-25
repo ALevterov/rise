@@ -86,3 +86,29 @@
     margin-top: 61px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .section_questions {
+    &::before {
+      height: 124px;
+    }
+    padding-top: 204px;
+    padding-bottom: 66px;
+  }
+  .section_questions_email {
+    font-size: 20.323px;
+    margin-top: 30px;
+  }
+  .section_questions_social {
+    margin-top: 34px;
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .section_questions_logo {
+    width: 130px;
+    height: 102px;
+    margin-top: 41px;
+  }
+}

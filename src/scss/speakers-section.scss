@@ -73,10 +73,10 @@
   transform: translateY(-50%);
 }
 .speakers_carousel_btn_prev {
-  left: -140px;
+  left: -7.29vw;
 }
 .speakers_carousel_btn_next {
-  right: -140px;
+  right: -7.29vw;
 }
 .speakers_carousel_item {
   display: flex;
@@ -121,7 +121,7 @@
       font-family: SF Pro Display;
       font-weight: 600;
       padding: 58px 32px;
-      white-space: nowrap;
+      white-space: normal;
       max-width: 25.52vw;
     }
     &:nth-child(3) {
@@ -183,6 +183,12 @@
   .speakers_carousel_item_name {
     font-size: 23px;
   }
+  .speakers_carousel_btn_prev,
+  .speakers_carousel_btn_prev svg,
+  .speakers_carousel_btn_next,
+  .speakers_carousel_btn_next svg {
+    width: 57px;
+  }
   .section_why_event.speakers_event {
     margin-top: 105px;
 
@@ -197,11 +203,68 @@
       }
     }
   }
-  // .section_why_event.speakers_event {
-  //   .section_why_event_item {
-  //     &:first-child {
-  //       font-size: 33px;
-  //     }
-  //   }
-  // }
+}
+
+@media screen and (max-width: 1024px) {
+  .section_speakers {
+    padding-top: 224px;
+    padding-bottom: 87px;
+    &::before {
+      height: 124px;
+    }
+  }
+  .speakers_undertitle {
+    margin-top: 21px;
+    font-size: 12.523px;
+  }
+  .speakers_cases_container {
+    gap: 10px;
+    margin-top: 29px;
+    .speakers_case_title,
+    .speakers_case_content {
+      font-size: 10px;
+    }
+    .speakers_case_content {
+      margin-top: 11px;
+    }
+  }
+  .section_speakers_carousel_container {
+    margin-top: 63px;
+  }
+  .speakers_carousel_item {
+    gap: 21px;
+
+    .speakers_carousel_item_list li {
+      font-size: 10px;
+    }
+  }
+  .speakers_carousel_item {
+    .speakers_carousel_item_name {
+      font-size: 15.242px;
+    }
+  }
+  .speakers_carousel_btn_prev,
+  .speakers_carousel_btn_prev svg,
+  .speakers_carousel_btn_next,
+  .speakers_carousel_btn_next svg {
+    width: 38px;
+  }
+  .section_why_event.speakers_event {
+    margin-top: 71px;
+
+    .section_why_event_item {
+      &:first-child {
+        padding: 30px 16px;
+        font-size: 20.537px;
+      }
+      &:nth-child(2) {
+        padding: 27px 33px;
+        font-size: 12.523px;
+      }
+      &:nth-child(3) {
+        padding: 16px 12px;
+        font-size: 9.145px;
+      }
+    }
+  }
 }

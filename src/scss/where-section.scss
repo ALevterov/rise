@@ -94,3 +94,39 @@
     padding-bottom: 56px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .section_where {
+    padding-top: 187px;
+    &::before {
+      height: 124px;
+    }
+  }
+  .section_where_content {
+    padding-top: 25px;
+  }
+  .section_where_edition {
+    width: 130px;
+    height: 23px;
+  }
+  .section_where_left_subscription {
+    font-size: 16.767px;
+    margin-top: 40px;
+  }
+  .section_where_right_map,
+  .section_where_right_map iframe {
+    width: 206px;
+    height: 376px;
+  }
+  .section_where_left_bottom {
+    gap: 11px;
+
+    img {
+      width: 134px;
+      height: 98px;
+    }
+  }
+  .section_where_content {
+    padding-bottom: 37px;
+  }
+}
