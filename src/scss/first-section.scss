@@ -42,6 +42,8 @@
   flex-grow: 1;
   padding: 53px 0;
   padding-left: 4.69vw;
+  display: flex;
+  align-items: center;
 }
 .header__nav_list {
   display: flex;
@@ -141,14 +143,14 @@
   font-style: normal;
   font-weight: 800;
   font-size: 201px;
-  line-height: 240px;
+  line-height: 120%;
 }
 .section_first_subscription {
   font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 300;
   font-size: 43px;
-  line-height: 51px;
+  line-height: 120%;
   max-width: 264px;
 }
 .section_first__content_bottom {
@@ -188,7 +190,7 @@
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
-  line-height: 30px;
+  line-height: 120%;
   color: $accent-color;
   position: relative;
   white-space: nowrap;
@@ -232,6 +234,13 @@
   &:hover {
     background-color: $accent-color;
     color: #0f0121;
+    path {
+      // fill: #0f0121;
+      stroke: #0f0121;
+    }
+  }
+  path {
+    transition: 0.3s ease-in-out stroke;
   }
 }
 .get_ticket_btn {
@@ -243,10 +252,91 @@
 .get_ticket_big_btn {
   @include get_ticket_btns(2.3553px);
   font-size: 49.4621px;
-  line-height: 59px;
+  line-height: 112%;
   padding: 18.8427px 32.9747px;
 }
 .section_first__bottom {
   background: linear-gradient(180deg, rgba(15, 1, 31, 0) 0%, #0f011f 100%);
   padding-bottom: 122px;
+}
+
+@media screen and (max-width: 1440px) {
+  .header {
+    height: 96px;
+    top: 50px;
+  }
+  .header__logo {
+    padding: 19px;
+    // width: 75px;
+    // height: 59px;
+    .header__logo_img {
+      width: 75px;
+      height: 59px;
+    }
+  }
+  .header__nav {
+    padding: 39px 0;
+    padding-left: 4vw;
+  }
+  .header__nav_link {
+    font-size: 16px;
+  }
+  .get_ticket_btn {
+    padding: 5.996px 10.493px;
+    font-size: 16px;
+  }
+  .header__social {
+    gap: 31px;
+    padding-left: 0;
+    svg {
+      width: 21px;
+      height: 21px;
+    }
+  }
+  .section_first__content {
+    padding-top: 146px;
+  }
+  .content_top_wrapper_item {
+    font-size: 53.129px;
+    padding: 16.698px 23.529px;
+  }
+  .section_first__content_middle {
+    margin-top: 50px;
+  }
+  .section_first_main_title {
+    font-size: 152.557px;
+  }
+  .section_first_subscription {
+    font-size: 32.637px;
+    max-width: 201px;
+  }
+  .section_first__content_bottom {
+    margin-top: 48px;
+  }
+  .get_ticket_big_btn {
+    @include get_ticket_btns(1.77px);
+    padding: 14.301px 25.028px;
+    font-size: 37.541px;
+
+    svg {
+      width: 27px;
+      height: 28px;
+      margin-left: 10px;
+    }
+  }
+  .running_string__container {
+    margin-top: 86px;
+
+    .running_string__item {
+      font-size: 18.975px;
+
+      &::after {
+        height: 1px;
+        top: calc(50% + 1px);
+      }
+    }
+  }
+  .section_first__bottom {
+    padding-bottom: 92px;
+  }
 }

@@ -1,9 +1,9 @@
 .section_program {
   @include with-devider();
-  &:before {
-    height: 304px;
+  &::before {
+    height: 204px;
   }
-  padding-top: 474px;
+  padding-top: 374px;
   padding-bottom: 474px;
   .container {
     position: relative;
@@ -16,8 +16,9 @@
   position: absolute;
   z-index: 1;
   width: 100%;
-  top: 35%;
+  top: 33%;
 }
+
 .section_program_ellipse_pink {
   position: absolute;
   right: 0;
@@ -59,13 +60,25 @@
     width: 100%;
     border-collapse: collapse;
     tr {
+      transition: 0.3s ease-in-out background-color;
+      &:hover {
+        background-color: #40354d;
+        color: $blue;
+        td {
+          background-color: #40354d;
+          color: $blue;
+          border-bottom: 1px solid $blue;
+        }
+      }
       // display: block;
       td {
+        transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color,
+          0.3s ease-in-out border;
         padding: 62px 0 50px 0;
         border-bottom: 1px solid #fff;
+        color: #fff;
         &:nth-child(1),
         &:nth-child(3) {
-          color: #fff;
           font-size: 50px;
           font-family: SF Pro Display;
         }
@@ -76,16 +89,76 @@
           width: 21.875vw;
         }
         &:nth-child(2) {
-          color: #fff;
           font-size: 60px;
           font-family: SF Pro Display;
           width: 5.4166vw;
         }
         &:nth-child(4) {
-          color: #fff;
           font-size: 25px;
           font-family: SF Pro Display;
           font-weight: 200;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .section_program_bg {
+    top: 19%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .section_program {
+    &::before {
+      height: 154px;
+    }
+    padding-top: 284px;
+    padding-bottom: 284px;
+  }
+  .section_program_bg {
+    top: 20%;
+  }
+  .section_program_undertitle {
+    font-size: 19px;
+    margin-top: 29px;
+  }
+  .section_program_program {
+    margin-top: 67px;
+  }
+  .section_program_program {
+    gap: 68px;
+    .program_item_date {
+      font-size: 41.745px;
+      margin-bottom: 30px;
+    }
+    .program_item_body {
+      width: 100%;
+      border-collapse: collapse;
+      tr {
+        transition: 0.3s ease-in-out background-color;
+        &:hover {
+          background-color: #40354d;
+          color: $blue;
+          td {
+            background-color: #40354d;
+            color: $blue;
+            border-bottom: 1px solid $blue;
+          }
+        }
+        td {
+          padding: 47px 0 40px 0;
+          &:nth-child(1),
+          &:nth-child(3) {
+            font-size: 38px;
+          }
+          &:nth-child(2) {
+            font-size: 45.539px;
+          }
+          &:nth-child(4) {
+            font-size: 19px;
+          }
         }
       }
     }

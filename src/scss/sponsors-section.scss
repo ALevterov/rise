@@ -28,3 +28,18 @@
     font-weight: 300;
   }
 }
+
+@media screen and (max-width: 1440px) {
+  .section_sponsors {
+    padding: 130px 0;
+  }
+  .sponsors_container {
+    gap: 51px;
+  }
+  .sponsor_item {
+    height: 240px;
+  }
+  .sponsor_item_name {
+    font-size: 15.18px;
+  }
+}

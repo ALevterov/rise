@@ -5,19 +5,20 @@
     position: relative;
     z-index: 2;
   }
-  padding-top: 512px;
+  padding-top: 310px;
   &::before {
-    height: 304px;
+    height: 204px;
   }
 }
 .section_where_palm {
   position: absolute;
   right: 0;
-  top: -25%;
+  top: -10%;
   width: 15.88vw;
 }
 .section_where_content {
   padding-bottom: 74px;
+  padding-top: 50px;
 }
 .section_where_left_main {
   display: flex;
@@ -43,7 +44,7 @@
   font-size: 33px;
   font-family: SF Pro Display;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 90%;
 }
 .section_where_left_bottom {
   display: flex;
@@ -56,4 +57,40 @@
 .section_where_right_map {
   width: 405px;
   height: 741px;
+}
+
+@media screen and (max-width: 1440px) {
+  .section_where {
+    padding-top: 247px;
+    &::before {
+      height: 154px;
+    }
+  }
+  .section_where_content {
+    padding-top: 37px;
+  }
+  .section_where_edition {
+    width: 194px;
+    height: 35px;
+  }
+  .section_where_left_subscription {
+    font-size: 25.047px;
+    margin-top: 59px;
+  }
+  .section_where_right_map,
+  .section_where_right_map iframe {
+    width: 307px;
+    height: 562px;
+  }
+  .section_where_left_bottom {
+    gap: 16px;
+
+    img {
+      width: 200px;
+      height: 146px;
+    }
+  }
+  .section_where_content {
+    padding-bottom: 56px;
+  }
 }

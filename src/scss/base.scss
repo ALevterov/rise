@@ -1,4 +1,8 @@
-$container-margin: 120px;
+:root {
+  --container-margin: 120px;
+  --title-size: 50px;
+}
+$container-margin: var(--container-margin);
 $accent-color: #fde82b;
 $blue: #04bee0;
 * {
@@ -34,4 +38,11 @@ li {
 }
 .container {
   @include container();
+}
+
+@media screen and (max-width: 1440px) {
+  :root {
+    --container-margin: 90px;
+    --title-size: 38px;
+  }
 }

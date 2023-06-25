@@ -1,10 +1,10 @@
 .section_why {
-  padding-top: 405px;
+  padding-top: 305px;
   position: relative;
   padding-bottom: 170px;
   @include with-devider();
   &::before {
-    height: 304px;
+    height: 204px;
   }
 }
 .section_why__ellipse_left,
@@ -38,21 +38,22 @@
   z-index: 10;
 }
 .section_why_title {
-  font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 48px;
-  color: $accent-color;
-  // margin-top: 264px;
-  text-align: center;
+  @include section-title();
+  // font-family: 'SF Pro Display';
+  // font-style: normal;
+  // font-weight: 400;
+  // font-size: 40px;
+  // line-height: 120%;
+  // color: $accent-color;
+  // // margin-top: 264px;
+  // text-align: center;
 }
 .section_why_subscription {
   font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
-  line-height: 60px;
+  line-height: 120%;
 
   color: #ffffff;
   margin-top: 93px;
@@ -72,7 +73,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 25px;
-    line-height: 35px;
+    line-height: 140%;
 
     color: #ffffff;
 
@@ -88,7 +89,7 @@
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
-  line-height: 60px;
+  line-height: 120%;
 
   color: #ffffff;
 }
@@ -117,7 +118,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 25px;
-    line-height: 30px;
+    line-height: 120%;
 
     color: #0f011f;
     padding: 54px 66px;
@@ -129,6 +130,7 @@
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease-in-out;
+    white-space: nowrap;
   }
   &:nth-child(2):hover {
     background-color: $blue;
@@ -138,12 +140,13 @@
     font-style: normal;
     font-weight: 500;
     font-size: 80px;
-    line-height: 95px;
+    line-height: 120%;
     text-transform: uppercase;
     color: #ffffff;
     padding: 36px 36px;
     white-space: nowrap;
     border-left: none;
+    width: 36.4vw;
   }
 
   .section_why_event_item_arrow {
@@ -162,7 +165,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 25px;
-    line-height: 30px;
+    line-height: 120%;
   }
 }
 .section_why_carousel_container {
@@ -184,4 +187,65 @@
 }
 .why_carousel_btn_next {
   right: 0;
+}
+
+@media screen and (max-width: 1440px) {
+  .section_why {
+    padding-top: 246px;
+    padding-bottom: 129px;
+    &::before {
+      height: 154px;
+    }
+  }
+  .section_why_subscription {
+    font-size: 37.95px;
+    margin-top: 62px;
+  }
+  .section_why_text {
+    margin-top: 63px;
+    gap: 27px;
+    p {
+      font-size: 19px;
+    }
+  }
+  .section_why_ready_text {
+    font-size: 38px;
+    margin-top: 61px;
+  }
+  .section_why_carousel_container {
+    padding: 0 93px;
+    margin-top: 62px;
+  }
+  .why_carousel_btn_prev,
+  .why_carousel_btn_prev svg,
+  .why_carousel_btn_next,
+  .why_carousel_btn_next svg {
+    width: 57px;
+  }
+  .section_why_event {
+    margin-top: 175px;
+  }
+  .section_why_event_item {
+    .section_why_event_item_arrow {
+      width: 26.767px;
+      height: 27.758px;
+      bottom: 16px;
+      right: 16px;
+    }
+    .section_why_event_item_inner {
+      font-size: 18.811px;
+    }
+
+    &:first-child {
+      padding: 40px 50px;
+    }
+    &:nth-child(2) {
+      padding: 40px 50px;
+      font-size: 18.811px;
+    }
+    &:nth-child(3) {
+      padding: 27px 60px;
+      font-size: 60.195px;
+    }
+  }
 }

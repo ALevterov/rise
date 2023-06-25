@@ -19,7 +19,15 @@ whyCarousel.owlCarousel({
   pagination: false,
   dots: false,
   loop: true,
-  margin: 48,
+  // margin: 48,
+  responsive: {
+    0: {
+      margin: 37,
+    },
+    1441: {
+      margin: 48,
+    },
+  },
 })
 
 const nextBtnWhy = $('.why_carousel_btn_next')
@@ -36,8 +44,16 @@ howCarousel.owlCarousel({
   items: 1,
   pagination: false,
   loop: true,
-  margin: 40,
+  // margin: 40,
   dots: true,
+  responsive: {
+    0: {
+      margin: 30,
+    },
+    1440: {
+      margin: 40,
+    },
+  },
 })
 
 const nextBtnHow = $('.how_carousel_btn_next')
@@ -55,7 +71,15 @@ speakersCarousel.owlCarousel({
   items: 3,
   pagination: false,
   loop: true,
-  margin: 42,
+  // margin: 42,
+  responsive: {
+    0: {
+      margin: 32,
+    },
+    1440: {
+      margin: 42,
+    },
+  },
 })
 
 const nextBtnSpeakers = $('.speakers_carousel_btn_next')
