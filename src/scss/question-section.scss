@@ -1,11 +1,8 @@
 .section_questions {
   position: relative;
   @include with-devider();
-  &::before {
-    height: 204px;
-  }
-  padding-top: 344px;
-  padding-bottom: 253px;
+  padding-top: 250px;
+  padding-bottom: 130px;
   // overflow: hidden;
 }
 .section_questions_palm {
@@ -63,11 +60,8 @@
 
 @media screen and (max-width: 1440px) {
   .section_questions {
-    &::before {
-      height: 154px;
-    }
-    padding-top: 264px;
-    padding-bottom: 100px;
+    padding-top: 283px;
+    padding-bottom: 97px;
   }
   .section_questions_email {
     font-size: 30.36px;
@@ -89,10 +83,7 @@
 
 @media screen and (max-width: 1024px) {
   .section_questions {
-    &::before {
-      height: 124px;
-    }
-    padding-top: 204px;
+    padding-top: 120px;
     padding-bottom: 66px;
   }
   .section_questions_email {

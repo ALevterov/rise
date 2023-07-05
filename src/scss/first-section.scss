@@ -25,10 +25,11 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   transition: background-color 0.3s ease-in-out,
-    backdrop-filter 0.3s ease-in-out;
+    backdrop-filter 0.3s ease-in-out, -webkit-backdrop-filter 0.3s ease-in-out;
   &.blured {
     background-color: rgba(63, 63, 63, 0.25);
     backdrop-filter: blur(18.5px);
+    -webkit-backdrop-filter: blur(18.5px);
   }
 }
 .header__logo {
@@ -257,7 +258,7 @@
 }
 .section_first__bottom {
   background: linear-gradient(180deg, rgba(15, 1, 31, 0) 0%, #0f011f 100%);
-  padding-bottom: 122px;
+  padding-bottom: 110px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -337,7 +338,7 @@
     }
   }
   .section_first__bottom {
-    padding-bottom: 92px;
+    padding-bottom: 83px;
   }
 }
 
@@ -418,6 +419,6 @@
     }
   }
   .section_first__bottom {
-    padding-bottom: 62px;
+    padding-bottom: 56px;
   }
 }

@@ -1,11 +1,8 @@
 .section_speakers {
   position: relative;
   @include with-devider();
-  padding-top: 374px;
-  padding-bottom: 170px;
-  &::before {
-    height: 204px;
-  }
+  padding-top: 240px;
+  padding-bottom: 120px;
   .container {
     position: relative;
     z-index: 2;
@@ -149,11 +146,8 @@
 }
 @media screen and (max-width: 1440px) {
   .section_speakers {
-    padding-top: 294px;
-    padding-bottom: 130px;
-    &::before {
-      height: 154px;
-    }
+    padding-top: 180px;
+    padding-bottom: 90px;
   }
   .speakers_undertitle {
     margin-top: 30px;
@@ -207,11 +201,8 @@
 
 @media screen and (max-width: 1024px) {
   .section_speakers {
-    padding-top: 224px;
-    padding-bottom: 87px;
-    &::before {
-      height: 124px;
-    }
+    padding-top: 120px;
+    padding-bottom: 60px;
   }
   .speakers_undertitle {
     margin-top: 21px;

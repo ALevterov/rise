@@ -1,5 +1,7 @@
 .section_sponsors {
-  padding: 170px 0;
+  @include with-devider();
+  padding-top: 260px;
+  padding-bottom: 100px;
 }
 .sponsors_container {
   gap: 68px;
@@ -31,7 +33,8 @@
 
 @media screen and (max-width: 1440px) {
   .section_sponsors {
-    padding: 130px 0;
+    padding-top: 193px;
+    padding-bottom: 73px;
   }
   .sponsors_container {
     gap: 51px;
@@ -47,7 +50,8 @@
 
 @media screen and (max-width: 1024px) {
   .section_sponsors {
-    padding: 90px 0;
+    padding-top: 130px;
+    padding-bottom: 50px;
   }
   .sponsors_container {
     gap: 34px;

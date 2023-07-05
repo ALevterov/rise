@@ -1,16 +1,12 @@
 .section_tickets {
   @include with-devider();
   position: relative;
-  &::before {
-    height: 204px;
-    top: -304px;
-  }
-  padding-top: 90px;
+  padding-top: 280px;
   .container {
     position: relative;
     z-index: 2;
   }
-  padding-bottom: 170px;
+  padding-bottom: 120px;
 }
 .section_tickets_palm {
   position: absolute;
@@ -108,12 +104,8 @@
 }
 @media screen and (max-width: 1440px) {
   .section_tickets {
-    &::before {
-      height: 154px;
-      top: -154px;
-    }
-    padding-top: 140px;
-    padding-bottom: 130px;
+    padding-top: 210px;
+    padding-bottom: 90px;
     .section_tickets_palm {
       top: -80%;
     }
@@ -165,12 +157,8 @@
 
 @media screen and (max-width: 1024px) {
   .section_tickets {
-    &::before {
-      height: 124px;
-      top: -124px;
-    }
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 140px;
+    padding-bottom: 60px;
     .section_tickets_palm {
       top: -90%;
     }

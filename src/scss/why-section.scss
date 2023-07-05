@@ -1,11 +1,8 @@
 .section_why {
-  padding-top: 305px;
+  padding-top: 240px;
   position: relative;
-  padding-bottom: 170px;
+  padding-bottom: 80px;
   @include with-devider();
-  &::before {
-    height: 204px;
-  }
 }
 .section_why__ellipse_left,
 .section_why__ellipse_right,
@@ -39,14 +36,6 @@
 }
 .section_why_title {
   @include section-title();
-  // font-family: 'SF Pro Display';
-  // font-style: normal;
-  // font-weight: 400;
-  // font-size: 40px;
-  // line-height: 120%;
-  // color: $accent-color;
-  // // margin-top: 264px;
-  // text-align: center;
 }
 .section_why_subscription {
   font-family: 'SF Pro Display';
@@ -191,11 +180,8 @@
 
 @media screen and (max-width: 1440px) {
   .section_why {
-    padding-top: 246px;
-    padding-bottom: 129px;
-    &::before {
-      height: 154px;
-    }
+    padding-top: 180px;
+    padding-bottom: 60px;
   }
   .section_why_subscription {
     font-size: 37.95px;
@@ -252,11 +238,8 @@
 
 @media screen and (max-width: 1024px) {
   .section_why {
-    padding-top: 186px;
-    padding-bottom: 70px;
-    &::before {
-      height: 124px;
-    }
+    padding-top: 120px;
+    padding-bottom: 40px;
   }
   .section_why_subscription {
     font-size: 25.404px;

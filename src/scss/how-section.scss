@@ -1,9 +1,7 @@
 .section_how {
-  padding-top: 444px;
+  padding-top: 240px;
+  padding-bottom: 80px;
   @include with-devider();
-  &::before {
-    height: 274px;
-  }
 }
 .section_how_palm {
   position: absolute;
@@ -122,9 +120,7 @@
 }
 .how_image_wrapper {
   position: relative;
-  top: -100px;
   padding-top: 232px;
-  padding-bottom: 82px;
   overflow: hidden;
 
   .container {
@@ -148,14 +144,9 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .how_image_wrapper {
-    padding-bottom: 47px;
-  }
   .section_how {
-    padding-top: 324px;
-    &::before {
-      height: 204px;
-    }
+    padding-top: 180px;
+    padding-bottom: 60px;
   }
   .section_how_palm {
     top: -4%;
@@ -213,7 +204,6 @@
 
 @media screen and (max-width: 1024px) {
   .how_image_wrapper {
-    padding-bottom: 0;
     padding-top: 150px;
   }
   .how_image_wrapper {
@@ -222,10 +212,8 @@
     }
   }
   .section_how {
-    padding-top: 230px;
-    &::before {
-      height: 154px;
-    }
+    padding-top: 120px;
+    padding-bottom: 40px;
   }
   .section_how_palm {
     top: -4%;

@@ -1,10 +1,7 @@
 .section_program {
   @include with-devider();
-  &::before {
-    height: 204px;
-  }
-  padding-top: 374px;
-  padding-bottom: 474px;
+  padding-top: 260px;
+  padding-bottom: 120px;
   .container {
     position: relative;
     z-index: 2;
@@ -111,11 +108,8 @@
 
 @media screen and (max-width: 1440px) {
   .section_program {
-    &::before {
-      height: 154px;
-    }
-    padding-top: 284px;
-    padding-bottom: 284px;
+    padding-top: 195px;
+    padding-bottom: 90px;
   }
   .section_program_bg {
     top: 20%;
@@ -167,11 +161,8 @@
 
 @media screen and (max-width: 1024px) {
   .section_program {
-    &::before {
-      height: 124px;
-    }
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 130px;
+    padding-bottom: 60px;
   }
   .section_program_bg {
     top: 13%;
