@@ -1,19 +1,41 @@
+@keyframes blur-animated {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.dynamic_images {
+  transition: opacity 2s ease;
+}
+.blur_animated {
+  animation-name: blur-animated;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
 .section_why {
   padding-top: 240px;
   position: relative;
   padding-bottom: 80px;
+  overflow: hidden;
+  z-index: 2;
   @include with-devider();
 }
 .section_why__ellipse_left,
 .section_why__ellipse_right,
-.section_why__plant {
+.section_why__plant,
+.section_why_ellipse_blue {
   position: absolute;
 }
 .section_why__ellipse_left {
   background: rgba(0, 170, 201, 0.12);
   transform: translateX(-50%) translateY(-50%);
   filter: blur(264px);
-  top: 15%;
+  top: 30%;
 }
 .section_why__ellipse_left,
 .section_why__ellipse_right {
@@ -24,16 +46,81 @@
 }
 .section_why__ellipse_right {
   right: 0;
+  top: 15%;
 }
-.section_why__plant {
-  right: 0;
-  top: 5%;
-  height: 81.98vw;
+.section_why_ellipse_blue {
+  bottom: 7%;
+  right: -30%;
+  border-radius: 1239px;
+  background: rgba(0, 170, 201, 0.12);
+  filter: blur(231.49044799804688px);
+  height: 50.729vw;
+  width: 64.53vw;
 }
-.section_why_container {
-  position: relative;
-  z-index: 10;
+.section_why_cases_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  margin-top: 103px;
 }
+.section_why_cases_container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.24vw;
+}
+
+.section_why_cases_container:nth-child(2n) {
+  margin-right: $container-margin;
+  flex-direction: row-reverse;
+
+  .section_why_cases_text {
+    align-items: flex-end;
+
+    .section_why_cases_text_title,
+    .section_why_cases_text_text {
+      text-align: right;
+    }
+  }
+}
+.section_why_cases_container:nth-child(2n + 1) {
+  margin-left: $container-margin;
+  flex-direction: row;
+}
+.section_why_cases_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  min-width: 27.34vw;
+  max-width: 27.34vw;
+}
+.section_why_cases_text_text {
+  color: #fff;
+  font-size: 1.24583333vw;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+}
+.section_why_cases_text_title {
+  color: $blue;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.4020833333vw;
+  line-height: 140%;
+}
+.section_why_cases_image_container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.56vw;
+
+  img {
+    min-width: 22.656vw;
+    max-width: 22.656vw;
+    height: 15.1vw;
+  }
+}
+
 .section_why_title {
   @include section-title();
 }
@@ -73,7 +160,7 @@
   }
 }
 .section_why_ready_text {
-  margin-top: 93px;
+  margin-top: 120px;
   font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 200;
@@ -88,7 +175,7 @@
 }
 .section_why_event {
   display: flex;
-  margin-top: 229px;
+  margin-top: 60px;
 }
 
 .section_why_event_item {
@@ -97,29 +184,53 @@
   justify-content: center;
   flex-grow: 1;
   border: 1px solid #fff;
+  height: 8.697916vw;
   &:first-child {
-    padding: 54px 70px;
+    width: 29.84375vw;
     text-align-last: left;
     border-right: none;
+    .section_why_event_item_logo {
+      margin-right: 6px;
+
+      img {
+        width: 10.677vw;
+        height: 3.802vw;
+      }
+    }
+    .section_why_event_item_text {
+      color: #fff;
+      font-size: 1.145833vw;
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
   }
   &:nth-child(2) {
     font-family: 'SF Pro Display';
     font-style: normal;
-    font-weight: 300;
-    font-size: 25px;
-    line-height: 120%;
-
+    font-weight: 700;
+    font-size: 2.5vw;
+    width: 25.72916vw;
     color: #0f011f;
-    padding: 54px 66px;
     position: relative;
     background-color: $accent-color;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease-in-out;
     white-space: nowrap;
+
+    .section_why_event_item_arrow {
+      position: absolute;
+      bottom: 1.0416vw;
+      right: 1.0416vw;
+      cursor: pointer;
+      width: 1.927vw;
+      height: 1.927vw;
+    }
   }
   &:nth-child(2):hover {
     background-color: $blue;
@@ -128,21 +239,12 @@
     font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: 500;
-    font-size: 80px;
-    line-height: 120%;
+    font-size: 2.265625vw;
     text-transform: uppercase;
     color: #ffffff;
-    padding: 36px 36px;
     white-space: nowrap;
     border-left: none;
-    width: 36.4vw;
-  }
-
-  .section_why_event_item_arrow {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
+    width: 32.5vw;
   }
   span {
     font-weight: 600;
@@ -160,7 +262,7 @@
 .section_why_carousel_container {
   position: relative;
   padding: 0 115px;
-  margin-top: 81px;
+  margin-top: 120px;
 }
 .why_carousel_btn_next,
 .why_carousel_btn_prev {

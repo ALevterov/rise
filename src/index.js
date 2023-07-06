@@ -95,3 +95,51 @@ nextBtnSpeakers.click(function () {
 prevBtnSpeakers.click(function () {
   speakersCarousel.trigger('prev.owl.carousel', [600])
 })
+
+const dynamicImages = Array.from(document.querySelectorAll('.dynamic_images'))
+
+const dynamicSrcArray = dynamicImages.map(img => {
+  return img.src
+})
+
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5)
+}
+
+const getRandomInterval = () => {
+  return Math.random() * 2 + 6
+}
+
+const getRandomIndex = () => {
+  return Math.floor(Math.random() * 9)
+}
+
+const imagesWithIntervals = dynamicImages.map(img => {
+  return {
+    img: img,
+    interval: getRandomInterval(),
+  }
+})
+
+shuffle(dynamicImages)
+
+dynamicImages.forEach((img, index) => {
+  setTimeout(() => {
+    img.classList.add('blur_animated')
+    setTimeout(() => {
+      img.classList.remove('blur_animated')
+    }, 3000)
+  }, index * 750)
+})
+
+imagesWithIntervals.forEach((item, index) => {
+  setTimeout(() => {
+    setInterval(() => {
+      item.img.src = dynamicSrcArray[getRandomIndex()]
+      item.img.classList.add('blur_animated')
+      setTimeout(() => {
+        item.img.classList.remove('blur_animated')
+      }, 3000)
+    }, item.interval * 1000)
+  }, Math.random() * 4 * 1000)
+})

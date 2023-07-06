@@ -2,20 +2,27 @@
   padding-top: 240px;
   padding-bottom: 80px;
   @include with-devider();
+  // overflow: hidden;
 }
 .section_how_palm {
   position: absolute;
   left: 0;
   width: 25.05vw;
-  top: -8%;
+  // top: -30%;
+  top: -650px;
   z-index: 1;
 }
 .how_section_container {
   position: relative;
   z-index: 2;
 }
-.section_how_ellipse_pink,
-.section_how_ellipse_blue {
+.how_carousel_blur_bg {
+  position: absolute;
+  top: 0px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.section_how_ellipse_pink {
   position: absolute;
   border-radius: 50%;
   z-index: 1;
@@ -26,23 +33,17 @@
   border-radius: 923px;
   background: rgba(255, 39, 174, 0.09);
   filter: blur(172.45010375976562px);
-  left: 129px;
-  top: 60%;
+  left: -300px;
+  top: 900px;
+  // left: -20%;
+  // top: 45%;
   transform: translateY(-50%);
-}
-.section_how_ellipse_blue {
-  width: 64.53vw;
-  height: 64.53vw;
-  top: 25%;
-  border-radius: 1239px;
-  background: rgba(0, 170, 201, 0.12);
-  filter: blur(231.49044799804688px);
-  right: 0;
 }
 .how_section_title {
   @include section-title();
 }
 .how_carousel_container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,17 +51,12 @@
 }
 .how_carousel_wrapper {
   position: relative;
-  width: 497px;
-  height: 1014px;
   margin: 0 auto;
-  background-size: contain;
-  background-position: center center;
   // padding: 134px 56px 85px 56px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 127px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
 }
 .how_carousel_bg {
   position: absolute;
@@ -75,16 +71,22 @@
   z-index: 1;
 }
 .how_carousel {
-  margin: 107px 0;
-  max-width: 379px;
+  max-width: 450px;
   position: relative;
-  right: -4px;
 
+  .owl-item {
+    max-width: 450px;
+    max-height: 100px;
+  }
+  .owl-item.active {
+    max-height: none;
+    height: auto;
+  }
   .owl-dots {
     width: 100%;
     display: flex;
     gap: 11px;
-    margin-top: 107px;
+    margin-top: 130px;
     justify-content: center;
     .owl-dot {
       width: 32.019px;
@@ -102,21 +104,21 @@
 .how_carousel_btn_prev,
 .how_carousel_btn_next {
   position: absolute;
-  top: 50%;
+  top: 200px;
   transform: translateX(-50%);
   outline: none;
   border: none;
   background-color: transparent;
 }
 .how_carousel_btn_prev {
-  left: -60%;
+  left: 0;
 }
 .how_carousel_btn_next {
-  right: -76%;
+  right: 0;
 }
 .how_carousel_item {
-  max-width: 379px;
-  max-height: 464px;
+  max-width: 450px;
+  height: auto;
 }
 .how_image_wrapper {
   position: relative;
@@ -154,25 +156,10 @@
   .how_carousel_container {
     margin-top: 97px;
   }
-  .how_carousel_wrapper,
-  .how_carousel_bg {
-    width: 385px;
-    height: 770px;
-  }
-  .how_carousel_wrapper {
-    padding-top: 70px;
-  }
-  .how_carousel_logo {
-    width: 97px;
-    height: 78px;
-  }
-  .how_carousel {
-    margin-top: 82px;
-  }
   .how_carousel,
   .how_carousel_item {
     max-width: 288px;
-    max-height: 352px;
+    // max-height: 352px;
   }
   .how_carousel {
     right: 0;
@@ -221,25 +208,14 @@
   .how_carousel_container {
     margin-top: 61px;
   }
-  .how_carousel_wrapper,
-  .how_carousel_bg {
-    width: 253px;
-    height: 515px;
-  }
-  .how_carousel_wrapper {
-    padding-top: 68px;
-  }
   .how_carousel_logo {
     width: 66px;
     height: 52px;
   }
-  .how_carousel {
-    margin-top: 55px;
-  }
   .how_carousel,
   .how_carousel_item {
     max-width: 193px;
-    max-height: 236px;
+    // max-height: 236px;
   }
   .how_carousel {
     right: 0;

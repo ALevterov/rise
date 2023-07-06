@@ -56,7 +56,7 @@
   font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
+  font-size: calc(1.3vw);
   line-height: 21px;
 
   color: #ffffff;
@@ -71,12 +71,12 @@
 .header__get_ticket {
   display: flex;
   align-items: center;
-  padding: 0 6.82vw;
+  padding: 0 5.3vw;
 }
 .header__social {
   display: flex;
   gap: 42px;
-  padding: 0 2.6vw;
+  padding: 0 2vw;
   // padding-right: 50px;
   align-items: center;
 }
@@ -115,15 +115,15 @@
 .content_top_wrapper_item {
   font-family: 'SF Pro Display';
   font-style: normal;
-  font-weight: 800;
-  font-size: 70px;
+  font-weight: 500;
+  font-size: 55.519px;
   line-height: 84px;
 
   /* identical to box height */
   text-transform: uppercase;
 
   color: #ffffff;
-  padding: 21px 30px;
+  padding: 17.25px 24.5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,8 +244,29 @@
     transition: 0.3s ease-in-out stroke;
   }
 }
+@mixin get_ticket_btns_filled($border) {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 300;
+  background-color: $accent-color;
+  color: #000;
+  border: $border solid $accent-color;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:hover {
+    background-color: transparent;
+    color: $accent-color;
+    path {
+      // fill: #0f0121;
+      stroke: $accent-color;
+    }
+  }
+  path {
+    transition: 0.3s ease-in-out stroke;
+  }
+}
 .get_ticket_btn {
-  @include get_ticket_btns(1px);
+  @include get_ticket_btns_filled(1px);
   font-size: 21px;
   line-height: 25px;
   padding: 8px 14px;
@@ -298,8 +319,8 @@
     padding-top: 146px;
   }
   .content_top_wrapper_item {
-    font-size: 53.129px;
-    padding: 16.698px 23.529px;
+    font-size: 52.483px;
+    padding: 15.5px 22px;
   }
   .section_first__content_middle {
     margin-top: 50px;
@@ -379,8 +400,8 @@
     padding-top: 99px;
   }
   .content_top_wrapper_item {
-    font-size: 35.566px;
-    padding: 11px 15.5px;
+    font-size: 35.109px;
+    padding: 10.5px 15px;
   }
   .section_first__content_middle {
     margin-top: 34px;
