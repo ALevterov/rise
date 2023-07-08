@@ -1,6 +1,6 @@
 :root {
   --container-margin: 120px;
-  --title-size: 50px;
+  --title-size: 2.60416vw;
   --devider-height: 160px;
 }
 $container-margin: var(--container-margin);
@@ -46,14 +46,14 @@ li {
 @media screen and (max-width: 1440px) {
   :root {
     --container-margin: 90px;
-    --title-size: 38px;
+    // --title-size: 38px;
     --devider-height: 120px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   :root {
-    --title-size: 25.4px;
+    // --title-size: 25.4px;
     --devider-height: 80px;
   }
 }

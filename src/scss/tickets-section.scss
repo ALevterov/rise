@@ -12,7 +12,7 @@
   position: absolute;
   left: 0;
   width: 23vw;
-  top: -105%;
+  top: -60%;
   z-index: 1;
 }
 .tickets_container {
@@ -20,6 +20,7 @@
   gap: 20px;
 }
 .tickets_item {
+  justify-content: space-between;
   padding-left: 34px;
   padding-top: 34px;
   display: flex;
@@ -28,6 +29,7 @@
   border: 1px solid #fff;
 }
 .tickets_item_title {
+  text-transform: uppercase;
   color: #fff;
   font-size: 67px;
   font-family: SF Pro Display;
@@ -86,6 +88,17 @@
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease-in-out;
+    border-top: 1px solid #fff;
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      height: 1px;
+      width: 8.85%;
+      background-color: #fff;
+      top: -1px;
+      left: -8.85%;
+    }
 
     &:hover {
       background-color: $blue;
@@ -99,7 +112,8 @@
 }
 @media screen and (max-width: 1600px) {
   .section_tickets_palm {
-    top: -85%;
+    top: -55%;
+    // top: -85%;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -107,8 +121,11 @@
     padding-top: 210px;
     padding-bottom: 90px;
     .section_tickets_palm {
-      top: -80%;
+      // top: -80%;
     }
+  }
+  .section_tickets_palm {
+    top: -70%;
   }
   .tickets_container {
     gap: 15px;
@@ -160,7 +177,7 @@
     padding-top: 140px;
     padding-bottom: 60px;
     .section_tickets_palm {
-      top: -90%;
+      top: -75%;
     }
   }
   .tickets_container {

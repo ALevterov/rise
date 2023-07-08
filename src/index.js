@@ -47,6 +47,7 @@ howCarousel.owlCarousel({
   items: 1,
   pagination: false,
   loop: true,
+  smartSpeed: 1000,
   // margin: 40,
   dots: true,
   responsive: {

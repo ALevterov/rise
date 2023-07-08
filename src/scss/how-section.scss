@@ -2,6 +2,7 @@
   padding-top: 240px;
   padding-bottom: 80px;
   @include with-devider();
+  z-index: 1;
   // overflow: hidden;
 }
 .section_how_palm {
@@ -10,7 +11,7 @@
   width: 25.05vw;
   // top: -30%;
   top: -650px;
-  z-index: 1;
+  z-index: 2;
 }
 .how_section_container {
   position: relative;
@@ -21,11 +22,12 @@
   top: 0px;
   transform: translateX(-50%);
   left: 50%;
+  width: 61.09vw;
 }
 .section_how_ellipse_pink {
   position: absolute;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 19;
 }
 .section_how_ellipse_pink {
   width: 48.07vw;
@@ -71,11 +73,11 @@
   z-index: 1;
 }
 .how_carousel {
-  max-width: 450px;
+  max-width: 23.4375vw;
   position: relative;
 
   .owl-item {
-    max-width: 450px;
+    max-width: 23.4375vw;
     max-height: 100px;
   }
   .owl-item.active {
@@ -117,30 +119,41 @@
   right: 0;
 }
 .how_carousel_item {
-  max-width: 450px;
+  max-width: 23.4375vw;
   height: auto;
 }
 .how_image_wrapper {
   position: relative;
-  padding-top: 232px;
-  overflow: hidden;
+  padding-top: 252px;
+  z-index: 1;
+  // overflow: hidden;
+
+  .how_palm_bottom {
+    position: absolute;
+    width: 13.646vw;
+    height: auto;
+    right: 0;
+    z-index: 9;
+    top: -40%;
+  }
+
+  .how_image_wrapper_bg {
+    position: absolute;
+    top: -25%;
+    width: 100%;
+  }
 
   .container {
     position: relative;
-    z-index: 1;
+    z-index: 10;
   }
-  .how_image_wrapper_bg {
-    position: absolute;
-    top: -22%;
-    width: 100%;
-  }
-  .how_images {
+  .how_videos {
     margin-top: 114px;
     display: flex;
     gap: 20px;
-
-    img {
+    iframe {
       width: calc(50% - 10px);
+      height: calc((50vw - var(--container-margin) - 10px) * 0.5625);
     }
   }
 }
@@ -150,40 +163,42 @@
     padding-top: 180px;
     padding-bottom: 60px;
   }
-  .section_how_palm {
-    top: -4%;
-  }
-  .how_carousel_container {
-    margin-top: 97px;
-  }
-  .how_carousel,
-  .how_carousel_item {
-    max-width: 288px;
-    // max-height: 352px;
-  }
-  .how_carousel {
-    right: 0;
-
-    .owl-dots {
-      margin-top: 81px;
+  .how_image_wrapper {
+    .how_image_wrapper_bg {
+      top: -33%;
     }
   }
+  .section_how_palm {
+    top: -600px;
+  }
+  .how_carousel_container {
+    margin-top: 93px;
+  }
+  .how_carousel {
+    .owl-dots {
+      margin-top: 98px;
+      gap: 7px;
+      .owl-dot {
+        width: 22px;
+        height: 4px;
+        border-radius: 33.136px;
+        &.active {
+          width: 58.73px;
+        }
+      }
+    }
+  }
+
   .how_carousel_btn_prev,
   .how_carousel_btn_prev svg,
   .how_carousel_btn_next,
   .how_carousel_btn_next svg {
     width: 57px;
   }
-  .how_carousel_btn_prev {
-    left: -50%;
-  }
-  .how_carousel_btn_next {
-    right: -70%;
-  }
   .how_image_wrapper {
     padding-top: 180px;
 
-    .how_images {
+    .how_videos {
       margin-top: 90px;
     }
   }
@@ -193,35 +208,19 @@
   .how_image_wrapper {
     padding-top: 150px;
   }
-  .how_image_wrapper {
-    .how_image_wrapper_bg {
-      top: -15%;
-    }
-  }
   .section_how {
     padding-top: 120px;
     padding-bottom: 40px;
   }
-  .section_how_palm {
-    top: -4%;
-  }
   .how_carousel_container {
-    margin-top: 61px;
+    margin-top: 66px;
   }
-  .how_carousel_logo {
-    width: 66px;
-    height: 52px;
-  }
-  .how_carousel,
-  .how_carousel_item {
-    max-width: 193px;
-    // max-height: 236px;
+  .section_how_palm {
+    top: -450px;
   }
   .how_carousel {
-    right: 0;
-
     .owl-dots {
-      margin-top: 53px;
+      margin-top: 66px;
       gap: 5px;
       .owl-dot {
         width: 16px;
@@ -239,16 +238,14 @@
   .how_carousel_btn_next svg {
     width: 38px;
   }
-  .how_carousel_btn_prev {
-    left: -50%;
-  }
-  .how_carousel_btn_next {
-    right: -70%;
-  }
   .how_image_wrapper {
-    .how_images {
+    .how_videos {
       margin-top: 60px;
       gap: 10px;
+      iframe {
+        width: calc(50% - 5px);
+        height: calc((50vw - var(--container-margin) - 5px) * 0.5625);
+      }
     }
   }
 }
