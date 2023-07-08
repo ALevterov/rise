@@ -77,7 +77,7 @@ setTimeout(() => {
   prevBtnHow.click(function () {
     howCarousel.trigger('prev.owl.carousel', [600])
   })
-}, 100)
+}, 200)
 
 if (window.innerWidth > 768) {
   const speakersCarousel = $('#speakers-carousel')

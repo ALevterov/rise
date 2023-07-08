@@ -214,10 +214,16 @@
   .section_speakers {
     padding-top: 88px;
     padding-bottom: 48px;
+    overflow: hidden;
 
     .mobile_event_block {
       margin-top: 80px;
     }
+  }
+  .section_speakers_bg {
+    width: 200%;
+    height: auto;
+    left: -50%;
   }
   .speakers_carousel_item {
     .speakers_carousel_item_img_container {

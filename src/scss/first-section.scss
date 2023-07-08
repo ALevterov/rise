@@ -450,6 +450,9 @@
     width: 100%;
     padding: 0 $container-margin;
     margin: 0;
+    &.blured {
+      top: 0;
+    }
   }
   .header_burger {
     display: block;
@@ -492,7 +495,7 @@
   }
   .content_top_wrapper_item {
     font-size: 3.8vw;
-    font-weight: 800;
+    font-weight: 500;
     padding: 1.359vw 1.923vw;
     border-right: 0.307px solid #fff;
 
