@@ -18,6 +18,10 @@
 .tickets_container {
   display: flex;
   gap: 20px;
+  margin-top: 136px;
+}
+.section_tickets_title {
+  @include section-title();
 }
 .tickets_item {
   justify-content: space-between;
@@ -72,8 +76,8 @@
     // min-width: 50%;
     height: 136px;
     position: relative;
-    right: -1px;
-    bottom: -1px;
+    right: -0.5px;
+    bottom: -0.5px;
     flex-grow: 1;
     color: #000;
     padding-left: 62px;
@@ -96,7 +100,7 @@
       height: 1px;
       width: 8.85%;
       background-color: #fff;
-      top: -1px;
+      top: -0.5px;
       left: -8.85%;
     }
 
@@ -129,6 +133,7 @@
   }
   .tickets_container {
     gap: 15px;
+    margin-top: 102px;
   }
   .tickets_item {
     padding-top: 25.67px;
@@ -182,6 +187,7 @@
   }
   .tickets_container {
     gap: 9px;
+    margin-top: 68px;
   }
   .tickets_item {
     padding-top: 17px;
@@ -222,5 +228,54 @@
         font-size: 27px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    &::before {
+      transform: translateX(-6px);
+    }
+  }
+  .section_tickets {
+    padding-top: 88px;
+    padding-bottom: 48px;
+
+    .section_tickets_palm {
+      top: -200%;
+    }
+  }
+  .tickets_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 54px;
+  }
+  .tickets_item {
+    width: 100%;
+    max-width: 350px;
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+  .tickets_item_title {
+    font-size: 28px;
+  }
+  .tickets_item_services {
+    margin-top: 12px;
+    p {
+      font-size: 12px;
+    }
+  }
+  .tickets_item_bottom {
+    margin-top: 27px;
+  }
+  .tickets_item_bottom_price {
+    font-size: 14px;
+    span {
+      font-size: 24px;
+    }
+  }
+  .tickets_item_bottom_buy {
+    font-size: 14px;
   }
 }

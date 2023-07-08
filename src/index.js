@@ -22,12 +22,16 @@ whyCarousel.owlCarousel({
   // margin: 48,
   responsive: {
     0: {
-      margin: 25,
+      items: 3,
+      margin: 16,
+      autoWidth: true,
     },
     1025: {
+      items: 3,
       margin: 37,
     },
     1441: {
+      items: 3,
       margin: 48,
     },
   },
@@ -42,60 +46,67 @@ nextBtnWhy.click(function () {
 prevBtnWhy.click(function () {
   whyCarousel.trigger('prev.owl.carousel', [600])
 })
-const howCarousel = $('#how-carousel')
-howCarousel.owlCarousel({
-  items: 1,
-  pagination: false,
-  loop: true,
-  smartSpeed: 1000,
-  // margin: 40,
-  dots: true,
-  responsive: {
-    0: {
-      margin: 30,
+
+setTimeout(() => {
+  const howCarousel = $('#how-carousel')
+  howCarousel.owlCarousel({
+    items: 1,
+    pagination: false,
+    loop: true,
+    smartSpeed: 1000,
+    margin: 40,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1,
+        margin: 30,
+      },
+      1440: {
+        items: 1,
+        margin: 40,
+      },
     },
-    1440: {
-      margin: 40,
+  })
+
+  const nextBtnHow = $('.how_carousel_btn_next')
+  const prevBtnHow = $('.how_carousel_btn_prev')
+  nextBtnHow.click(function () {
+    howCarousel.trigger('next.owl.carousel', [600])
+  })
+
+  prevBtnHow.click(function () {
+    howCarousel.trigger('prev.owl.carousel', [600])
+  })
+}, 100)
+
+if (window.innerWidth > 768) {
+  const speakersCarousel = $('#speakers-carousel')
+  speakersCarousel.owlCarousel({
+    items: 3,
+    pagination: false,
+    loop: true,
+    // margin: 42,
+    responsive: {
+      0: {
+        margin: 32,
+      },
+      1440: {
+        margin: 42,
+      },
     },
-  },
-})
+  })
 
-const nextBtnHow = $('.how_carousel_btn_next')
-const prevBtnHow = $('.how_carousel_btn_prev')
-nextBtnHow.click(function () {
-  howCarousel.trigger('next.owl.carousel', [600])
-})
+  const nextBtnSpeakers = $('.speakers_carousel_btn_next')
+  const prevBtnSpeakers = $('.speakers_carousel_btn_prev')
+  nextBtnSpeakers.click(function () {
+    console.log('hello!')
+    speakersCarousel.trigger('next.owl.carousel', [600])
+  })
 
-prevBtnHow.click(function () {
-  howCarousel.trigger('prev.owl.carousel', [600])
-})
-
-const speakersCarousel = $('#speakers-carousel')
-speakersCarousel.owlCarousel({
-  items: 3,
-  pagination: false,
-  loop: true,
-  // margin: 42,
-  responsive: {
-    0: {
-      margin: 32,
-    },
-    1440: {
-      margin: 42,
-    },
-  },
-})
-
-const nextBtnSpeakers = $('.speakers_carousel_btn_next')
-const prevBtnSpeakers = $('.speakers_carousel_btn_prev')
-nextBtnSpeakers.click(function () {
-  console.log('hello!')
-  speakersCarousel.trigger('next.owl.carousel', [600])
-})
-
-prevBtnSpeakers.click(function () {
-  speakersCarousel.trigger('prev.owl.carousel', [600])
-})
+  prevBtnSpeakers.click(function () {
+    speakersCarousel.trigger('prev.owl.carousel', [600])
+  })
+}
 
 const dynamicImages = Array.from(document.querySelectorAll('.dynamic_images'))
 

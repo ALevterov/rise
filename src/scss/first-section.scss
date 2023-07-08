@@ -3,6 +3,10 @@
   background-size: cover;
   position: relative;
   overflow: hidden;
+  background-position: center;
+}
+.header_burger {
+  display: none;
 }
 .section_first__container {
   display: flex;
@@ -24,6 +28,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
   transition: background-color 0.3s ease-in-out,
     backdrop-filter 0.3s ease-in-out, -webkit-backdrop-filter 0.3s ease-in-out;
   &.blured {
@@ -81,6 +86,7 @@
   align-items: center;
 }
 .header__social_item {
+  display: flex;
   path {
     transition: fill 0.2s ease-in-out;
   }
@@ -318,10 +324,6 @@
   .section_first__content {
     padding-top: 146px;
   }
-  // .content_top_wrapper_item {
-  //   font-size: 52.483px;
-  //   padding: 15.5px 22px;
-  // }
   .section_first__content_middle {
     margin-top: 50px;
   }
@@ -399,10 +401,6 @@
   .section_first__content {
     padding-top: 99px;
   }
-  // .content_top_wrapper_item {
-  //   font-size: 35.109px;
-  //   padding: 10.5px 15px;
-  // }
   .section_first__content_middle {
     margin-top: 34px;
   }
@@ -441,5 +439,81 @@
   }
   .section_first__bottom {
     padding-bottom: 56px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 78px;
+    top: 29px;
+    border: none;
+    width: 100%;
+    padding: 0 $container-margin;
+    margin: 0;
+  }
+  .header_burger {
+    display: block;
+    cursor: pointer;
+  }
+  .header__nav,
+  .header__get_ticket {
+    display: none;
+  }
+  .header__logo {
+    padding: 0;
+    border: none;
+    .header__logo_img {
+      width: 46px;
+      height: 37px;
+    }
+  }
+  .header_burger {
+    width: 23px;
+    height: 18px;
+  }
+  .header__social {
+    padding: 0;
+    gap: 45px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .section_first__content {
+    padding-top: 124px;
+    padding-bottom: 0;
+  }
+  .section_first__content_top {
+    justify-content: center;
+  }
+  .content_top_wrapper {
+    border: 0.307px solid #fff;
+  }
+  .content_top_wrapper_item {
+    font-size: 3.8vw;
+    font-weight: 800;
+    padding: 1.359vw 1.923vw;
+    border-right: 0.307px solid #fff;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+  .section_first__content_middle {
+    margin-top: 33px;
+  }
+  .section_first_main_title {
+    font-size: 97px;
+  }
+  .section_first_subscription {
+    font-size: 21px;
+    max-width: 130px;
+  }
+  .section_first__content_bottom {
+    margin-top: 25px;
+  }
+  .running_string__container {
+    margin-top: 45px;
   }
 }
