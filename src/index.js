@@ -99,7 +99,6 @@ if (window.innerWidth > 768) {
   const nextBtnSpeakers = $('.speakers_carousel_btn_next')
   const prevBtnSpeakers = $('.speakers_carousel_btn_prev')
   nextBtnSpeakers.click(function () {
-    console.log('hello!')
     speakersCarousel.trigger('next.owl.carousel', [600])
   })
 
@@ -168,4 +167,63 @@ closeItems.forEach(item => {
     mobileMenu.classList.remove('opened')
     document.body.classList.remove('lock')
   })
+})
+
+const popupImages = document.getElementById('popup_images')
+const clickableImages = document.querySelectorAll('.clickable_image')
+
+const imagesCarousel = $('#images-carousel')
+imagesCarousel.owlCarousel({
+  items: 1,
+  pagination: false,
+  loop: true,
+  // margin: 42,
+  responsive: {
+    0: {
+      margin: 32,
+    },
+    1440: {
+      margin: 42,
+    },
+  },
+})
+
+const openPopup = index => {
+  popupImages.classList.add('opened')
+  document.body.classList.add('lock')
+  imagesCarousel.trigger('to.owl.carousel', [index, 1])
+}
+const closePopup = () => {
+  popupImages.classList.remove('opened')
+  document.body.classList.remove('lock')
+}
+clickableImages.forEach(img => {
+  img.addEventListener('click', e => {
+    const index = e.target.dataset.index
+    openPopup(index)
+  })
+})
+popupImages
+  .querySelector('.popup_images_close')
+  .addEventListener('click', closePopup)
+popupImages.addEventListener('click', e => {
+  if (
+    e.target === popupImages ||
+    e.target.classList.contains('popup_images_content') ||
+    e.target.classList.contains('images_carousel_wrapper')
+  ) {
+    closePopup()
+  }
+})
+
+const nextBtnImages = $('.images_carousel_btn_next')
+const prevBtnImages = $('.images_carousel_btn_prev')
+
+console.log(nextBtnImages, prevBtnImages)
+nextBtnImages.click(function () {
+  imagesCarousel.trigger('next.owl.carousel', [600])
+})
+
+prevBtnImages.click(function () {
+  imagesCarousel.trigger('prev.owl.carousel', [600])
 })
