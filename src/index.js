@@ -155,3 +155,17 @@ imagesWithIntervals.forEach((item, index) => {
     }, item.interval * 1000)
   }, Math.random() * 4 * 1000)
 })
+
+const burger = document.getElementById('header_burger')
+const closeItems = document.querySelectorAll('.mobile_menu_close')
+const mobileMenu = document.getElementById('mobile_menu')
+burger.addEventListener('click', () => {
+  mobileMenu.classList.add('opened')
+  document.body.classList.add('lock')
+})
+closeItems.forEach(item => {
+  item.addEventListener('click', () => {
+    mobileMenu.classList.remove('opened')
+    document.body.classList.remove('lock')
+  })
+})

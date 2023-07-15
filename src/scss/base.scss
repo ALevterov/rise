@@ -17,6 +17,11 @@ $blue: #04bee0;
 body {
   background-color: #0f011f;
   scroll-behavior: smooth;
+  // overflow: hidden;
+}
+
+.lock {
+  overflow: hidden;
 }
 h1,
 h2,
